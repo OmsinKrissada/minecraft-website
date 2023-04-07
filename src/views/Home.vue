@@ -1,6 +1,22 @@
 <script setup lang="ts">
-import { maps } from '@/maps'
 import { FolderArrowDownIcon, MapIcon } from '@heroicons/vue/24/outline'
+import { useMediaQuery } from '@vueuse/core'
+import { useHead } from '@vueuse/head'
+import { headData } from '@/head'
+import { maps } from '@/maps'
+
+const md = useMediaQuery('(min-width: 768px)')
+
+// useHead({
+//   title: headData.title,
+//   meta: [
+//     { name: 'title', content: headData.title },
+//     { name: 'og:title', content: headData.title },
+//     { name: 'description', content: headData.description },
+//     { name: 'og:description', content: headData.description },
+//     { name: 'og:image', content: '@/assets/intro_vid_thumbnail.png' }
+//   ]
+// })
 </script>
 
 <template>
@@ -36,6 +52,7 @@ import { FolderArrowDownIcon, MapIcon } from '@heroicons/vue/24/outline'
       </div>
       <div>
         <video
+          v-if="md"
           class="my-4 aspect-video rounded-lg shadow-xl shadow-gray-500/30"
           src="@/assets/intro_vid.mp4"
           alt="video intro"
@@ -43,6 +60,12 @@ import { FolderArrowDownIcon, MapIcon } from '@heroicons/vue/24/outline'
           muted
           loop
           width="500"
+        />
+        <img
+          v-else
+          src="/intro_vid_thumbnail_2.png"
+          alt="thumbnail"
+          class="my-4 aspect-video rounded-lg shadow-xl shadow-gray-500/30"
         />
       </div>
     </section>
@@ -55,7 +78,7 @@ import { FolderArrowDownIcon, MapIcon } from '@heroicons/vue/24/outline'
         <div class="flex flex-col md:flex-row gap-8 text-gray-900 dark:text-neutral-300">
           <div
             v-for="map in maps"
-            class="relative group flex flex-col gap-2 p-4 bg-gray-300 dark:bg-gray-800 md:bg-inherit hover:bg-gray-300/50 dark:hover:bg-gray-800 rounded-md transition-colors cursor-default"
+            class="relative group flex flex-col gap-2 p-4 hover:bg-gray-300/50 dark:hover:bg-gray-800 rounded-md transition-colors cursor-default"
           >
             <div class="flex items-center gap-2">
               <h3 class="font-medium">{{ map.name }}</h3>
@@ -132,7 +155,9 @@ import { FolderArrowDownIcon, MapIcon } from '@heroicons/vue/24/outline'
           <p class="md:mt-6 md:text-xl text-gray-900 dark:text-neutral-300 mt-3">
             Chat directly to your friends from Discord chat to in-game chat, and the other way
             around.
-            <span class="text-fuchsia-400">*Discord reply only available for active players</span>
+            <span class="text-fuchsia-400"
+              >*Discord reply is only available for active players</span
+            >
           </p>
         </div>
         <div
