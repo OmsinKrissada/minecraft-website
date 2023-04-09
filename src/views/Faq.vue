@@ -8,6 +8,12 @@ import {
   QuestionMarkCircleIcon
 } from '@heroicons/vue/24/outline'
 import '@lottiefiles/lottie-player'
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: "FAQ | Omsin's Minecraft Server",
+  meta: [{ name: 'og:title', content: "FAQ | Omsin's Minecraft Server" }]
+})
 
 const list: { question: string; answer: string }[] = [
   {

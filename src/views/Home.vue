@@ -7,16 +7,16 @@ import { maps } from '@/maps'
 
 const md = useMediaQuery('(min-width: 768px)')
 
-// useHead({
-//   title: headData.title,
-//   meta: [
-//     { name: 'title', content: headData.title },
-//     { name: 'og:title', content: headData.title },
-//     { name: 'description', content: headData.description },
-//     { name: 'og:description', content: headData.description },
-//     { name: 'og:image', content: '@/assets/intro_vid_thumbnail.png' }
-//   ]
-// })
+useHead({
+  title: "Omsin's Minecraft Server",
+  meta: [
+    //   { name: 'title', content: headData.title },
+    { name: 'og:title', content: headData.title }
+    //   { name: 'description', content: headData.description },
+    //   { name: 'og:description', content: headData.description },
+    //   { name: 'og:image', content: '@/assets/intro_vid_thumbnail.png' }
+  ]
+})
 </script>
 
 <template>
