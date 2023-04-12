@@ -109,7 +109,7 @@ onMounted(() => {
               @click="sendServerStart"
             >
               <PlayCircleIcon class="inline w-5 mr-1" />
-              Click to Start
+              Click to Wake
             </button>
 
             <img
