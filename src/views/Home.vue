@@ -156,7 +156,7 @@ useHead({
             Chat directly to your friends from Discord chat to in-game chat, and the other way
             around.
             <span class="text-fuchsia-400"
-              >*Discord reply is only available for active players</span
+              >*Discord reply is only available for active players.</span
             >
           </p>
         </div>
