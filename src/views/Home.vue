@@ -14,7 +14,7 @@ useHead({
     { name: 'og:title', content: headData.title }
     //   { name: 'description', content: headData.description },
     //   { name: 'og:description', content: headData.description },
-    //   { name: 'og:image', content: '@/assets/intro_vid_thumbnail.png' }
+    //   { name: 'og:image', content: '@/assets/intro_vid_thumbnail.webp' }
   ]
 })
 </script>
@@ -54,7 +54,7 @@ useHead({
         <video
           v-if="md"
           class="my-4 aspect-video rounded-lg shadow-xl shadow-gray-500/30"
-          src="@/assets/intro_vid.mp4"
+          src="@/assets/intro_vid.webm"
           alt="video intro"
           autoplay
           muted
@@ -63,7 +63,7 @@ useHead({
         />
         <img
           v-else
-          src="/intro_vid_thumbnail_2.png"
+          src="@/assets/intro_vid_thumbnail_2.webp"
           alt="thumbnail"
           class="my-4 aspect-video rounded-lg shadow-xl shadow-gray-500/30"
         />
@@ -144,7 +144,7 @@ useHead({
         <div
           class="w-full flex-1 rounded-xl bg-gray-900 aspect-video relative overflow-clip shadow-2xl shadow-teal-500/50"
         >
-          <img class="w-full h-full" src="@/assets/map_preview.png" alt="web map preview" />
+          <img class="w-full h-full" src="@/assets/map_preview.webp" alt="web map preview" />
         </div>
       </div>
       <div class="flex flex-col gap-6 md:flex-row-reverse md:gap-8 xl:gap-24 items-center">
@@ -165,7 +165,7 @@ useHead({
         >
           <img
             class="w-full h-full"
-            src="@/assets/discord_chat_preview_big.png"
+            src="@/assets/discord_chat_preview_big.webp"
             alt="discord chat preview"
           />
         </div>
@@ -184,7 +184,7 @@ useHead({
 					class="w-full flex-1 rounded-xl bg-gray-900 aspect-video relative overflow-clip shadow-2xl shadow-teal-500/50">
 					<img
 						class="w-full h-full"
-						src="./assets/map_preview.png"
+						src="./assets/map_preview.webp"
 						alt="web map preview" />
 				</div> -->
       </div>

@@ -11,7 +11,12 @@ const md = useMediaQuery('(min-width: 768px)')
 
 <template>
   <div class="group w-5 h-5">
-    <button @click="next()" @mouseenter="themeHover = true" @mouseleave="themeHover = false">
+    <button
+      @click="next()"
+      @mouseenter="themeHover = true"
+      @mouseleave="themeHover = false"
+      aria-label="theme changer"
+    >
       <ComputerDesktopIcon v-if="state === 'auto'" class="w-5 h-5" />
       <MoonIcon v-if="state === 'dark'" class="w-5 h-5" />
       <SunIcon v-if="state === 'light'" class="w-5 h-5" />
