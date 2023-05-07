@@ -31,7 +31,7 @@ const md = useMediaQuery('(min-width: 768px)')
     >
       <p
         v-if="themeHover && md"
-        class="absolute origin-top left-1/2 -translate-x-1/2 mt-2 px-2 py-1 dark:border border-neutral-600 rounded-md shadow-md"
+        class="absolute origin-top left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-white dark:bg-black dark:border border-neutral-600 rounded-md shadow-md"
       >
         {{ state }}
       </p>

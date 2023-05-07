@@ -78,7 +78,7 @@ useHead({
         <div class="flex flex-col md:flex-row gap-8 text-gray-900 dark:text-neutral-300">
           <div
             v-for="map in maps"
-            class="relative group flex flex-col gap-2 p-4 hover:bg-gray-300/50 dark:hover:bg-gray-800 rounded-md transition-colors cursor-default"
+            class="relative group flex flex-col gap-2 p-4 hover:bg-gray-300/50 dark:hover:bg-gray-800/50 rounded-md transition-colors cursor-default"
           >
             <div class="flex items-center gap-2">
               <h3 class="font-medium">{{ map.name }}</h3>
@@ -111,18 +111,9 @@ useHead({
               </a>
             </div>
 
-            <transition
-              enter-active-class="transition duration-100 ease-out"
-              enter-from-class="transform scale-95 opacity-0"
-              enter-to-class="transform scale-100 opacity-100"
-              leave-active-class="transition duration-75 ease-in"
-              leave-from-class="transform scale-100 opacity-100"
-              leave-to-class="transform scale-95 opacity-0"
-            >
-              <p v-if="map.archived_at" class="font-medium text-xs dark:text-neutral-500">
-                Archival date: {{ map.archived_at }}
-              </p>
-            </transition>
+            <p v-if="map.archived_at" class="font-medium text-xs dark:text-neutral-500">
+              Archival date: {{ map.archived_at }}
+            </p>
           </div>
         </div>
       </div>
@@ -155,7 +146,7 @@ useHead({
           <p class="md:mt-6 md:text-xl text-gray-900 dark:text-neutral-300 mt-3">
             Chat directly to your friends from Discord chat to in-game chat, and the other way
             around.
-            <span class="text-fuchsia-400"
+            <span class="text-fuchsia-500"
               >*Discord reply is only available for active players.</span
             >
           </p>
