@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { FolderArrowDownIcon, MapIcon } from '@heroicons/vue/24/outline';
-import { useMediaQuery } from '@vueuse/core';
 import { useHead } from '@vueuse/head';
 import { headData } from '@/head';
 import { maps } from '@/maps';
-
-const md = useMediaQuery('(min-width: 768px)');
+import EmblaCarousel from '@/components/EmblaCarousel.vue';
 
 useHead({
   title: "Omsin's Minecraft Server",
@@ -51,7 +49,7 @@ useHead({
         </p>
       </div>
       <div>
-        <video
+        <!-- <video
           v-if="md"
           class="my-4 aspect-video rounded-lg shadow-xl shadow-gray-500/30"
           src="@/assets/intro_vid.webm"
@@ -66,7 +64,8 @@ useHead({
           src="@/assets/intro_vid_thumbnail_2.webp"
           alt="thumbnail"
           class="my-4 aspect-video rounded-lg shadow-xl shadow-gray-500/30"
-        />
+        /> -->
+        <EmblaCarousel class="my-4 max-w-[500px] rounded-lg shadow-xl shadow-gray-500/30" />
       </div>
     </section>
 
@@ -75,7 +74,9 @@ useHead({
         <h2 class="mb-8 font-semibold text-xl text-black dark:text-neutral-200">
           Maps we played together
         </h2>
-        <div class="flex flex-col md:flex-row gap-8 text-gray-900 dark:text-neutral-300">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 text-gray-900 dark:text-neutral-300"
+        >
           <div
             v-for="map in maps"
             :key="map.name"
