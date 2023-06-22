@@ -47,7 +47,7 @@ useHead({
         <p class="my-2 lg:text-xl md:leading-normal text-gray-900 dark:text-neutral-300">
           เซิฟ survival เปิดเล่นกันเอง host ในไทยแล้วก็หวังว่า ping จะดีอะนะ 55
           <br />
-          เข้าได้ทั้ง Java (1.9 ขึ้นไป) และ Bedrock (1.19.30 ถึง ล่าสุด)
+          เข้าได้ผ่าน Java เวอร์ชัน 1.9 ขึ้นไป แต่แนะนำให้ใช้ 1.20+
         </p>
       </div>
       <div>
