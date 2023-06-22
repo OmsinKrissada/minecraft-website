@@ -1,35 +1,35 @@
 <script setup lang="ts">
-import { QuestionMarkCircleIcon } from '@heroicons/vue/24/outline'
-import { useHead } from '@vueuse/head'
-import { marked } from 'marked'
+import { QuestionMarkCircleIcon } from '@heroicons/vue/24/outline';
+import { useHead } from '@vueuse/head';
+import { marked } from 'marked';
 
 useHead({
   title: "FAQ | Omsin's Minecraft Server",
-  meta: [{ name: 'og:title', content: "FAQ | Omsin's Minecraft Server" }]
-})
+  meta: [{ name: 'og:title', content: "FAQ | Omsin's Minecraft Server" }],
+});
 
 const list: { question: string; answer: string }[] = [
   {
     question: 'ใช้เวอร์ชันอะไรเข้าได้บ้าง',
     answer:
-      'ถ้าเป็น Java เข้าได้ตั้งแต่ 1.9 ขึ้นไป โดยที่ตัวเซิฟจะรันเป็นเวอร์ชันที่ระบุเป็น "Native Version" [บนหน้าหลัก](/)'
+      'ถ้าเป็น Java เข้าได้ตั้งแต่ 1.9 ขึ้นไป โดยที่ตัวเซิฟจะรันเป็นเวอร์ชันที่ระบุเป็น "Native Version" [บนหน้าหลัก](/)',
   },
   {
     question: 'เล่นในมือถือ/iPad เข้าได้ไหม',
-    answer: 'เพิ่งเอา feature นี้ออกไปตอนอัพเป็น 1.20 ถ้าอยากใช้ iPad เข้าให้ทักมาได้ใส่กลับให้'
+    answer: 'เพิ่งเอา feature นี้ออกไปตอนอัพเป็น 1.20 ถ้าอยากใช้ iPad เข้าให้ทักมาได้ใส่กลับให้',
   },
   {
     question: 'เปิดทั้งวันไหม',
     answer:
-      'เซิฟจะเปิดโดยอัตโนมัติ เมื่อ <span class="text-fuchsia-500 dark:text-fuchsia-400">มีคนกดเข้าเซิฟ</span> หรือ <span class="text-fuchsia-500 dark:text-fuchsia-400">มีคนกดปุ่ม "Click to Wake"</span> ที่อยู่บนสุดของหน้านี้ (ถ้าขึ้นว่า Offline แล้วไม่มีปุ่มให้ทักมา) และจะปิดเองเวลา 01:00 น.'
+      'เซิฟจะเปิดโดยอัตโนมัติ เมื่อ <span class="text-fuchsia-500 dark:text-fuchsia-400">มีคนกดเข้าเซิฟ</span> หรือ <span class="text-fuchsia-500 dark:text-fuchsia-400">มีคนกดปุ่ม "Click to Wake"</span> ที่อยู่บนสุดของหน้านี้ (ถ้าขึ้นว่า Offline แล้วไม่มีปุ่มให้ทักมา) และจะปิดเองเวลา 01:00 น.',
   },
   {
     question: 'ไม่อยากให้คนเห็นว่าอยู่ที่ไหนบนแมพ ปิดได้ไหม',
     answer:
-      'ถ้าไม่อยากให้คนที่ใช้ web map เห็นว่าอยู่ไหน ให้พิมพ์ `/dynmap hide` ในเกม ถ้าอยากให้เห็นเหมือนเดิมพิมพ์ `/dynmap show`'
+      'ถ้าไม่อยากให้คนที่ใช้ web map เห็นว่าอยู่ไหน ให้พิมพ์ `/dynmap hide` ในเกม ถ้าอยากให้เห็นเหมือนเดิมพิมพ์ `/dynmap show`',
   },
-  { question: 'ทำเว็บนี้ทำไม', answer: 'why not? xd' }
-]
+  { question: 'ทำเว็บนี้ทำไม', answer: 'why not? xd' },
+];
 </script>
 
 <template>

@@ -1,25 +1,25 @@
 <script setup lang="ts">
-import { PlayCircleIcon } from '@heroicons/vue/20/solid'
-import axios from 'axios'
-import { ref, onMounted } from 'vue'
+import { PlayCircleIcon } from '@heroicons/vue/20/solid';
+import axios from 'axios';
+import { ref, onMounted } from 'vue';
 
-const serverStatus = ref('Fetching...')
+const serverStatus = ref('Fetching...');
 async function getServerStatus() {
   try {
-    serverStatus.value = (await axios.get('https://mc.krissada.com/mcsleep/status')).data?.status
+    serverStatus.value = (await axios.get('https://mc.krissada.com/mcsleep/status')).data?.status;
   } catch {
-    serverStatus.value = 'Offline'
+    serverStatus.value = 'Offline';
   }
 }
 
 function sendServerStart() {
-  axios.post('https://mc.krissada.com/mcsleep/wakeup')
+  axios.post('https://mc.krissada.com/mcsleep/wakeup');
 }
 
 onMounted(() => {
-  getServerStatus()
-  setInterval(getServerStatus, 2000)
-})
+  getServerStatus();
+  setInterval(getServerStatus, 2000);
+});
 </script>
 
 <template>

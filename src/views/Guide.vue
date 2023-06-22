@@ -4,9 +4,9 @@ import {
   MapIcon,
   ComputerDesktopIcon,
   DeviceTabletIcon,
-  DevicePhoneMobileIcon
-} from '@heroicons/vue/24/outline'
-import '@lottiefiles/lottie-player'
+  DevicePhoneMobileIcon,
+} from '@heroicons/vue/24/outline';
+import '@lottiefiles/lottie-player';
 </script>
 
 <template>

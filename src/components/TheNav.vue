@@ -1,31 +1,31 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { RouterLink } from 'vue-router'
-import { useMediaQuery, useWindowScroll } from '@vueuse/core'
-import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
-import ThemeChanger from '@/components/nav/ThemeChanger.vue'
-import WakeUpButton from '@/components/nav/WakeupButton.vue'
+import { computed, ref } from 'vue';
+import { RouterLink } from 'vue-router';
+import { useMediaQuery, useWindowScroll } from '@vueuse/core';
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue';
+import ThemeChanger from '@/components/nav/ThemeChanger.vue';
+import WakeUpButton from '@/components/nav/WakeupButton.vue';
 import {
   ChevronDownIcon,
   Bars3BottomLeftIcon,
   XMarkIcon,
-  ArrowTopRightOnSquareIcon
-} from '@heroicons/vue/20/solid'
-import { maps } from '@/maps'
+  ArrowTopRightOnSquareIcon,
+} from '@heroicons/vue/20/solid';
+import { maps } from '@/maps';
 
 // const route = useRoute()
-const show = ref(false)
-const md = useMediaQuery('(min-width: 768px)')
-const { y } = useWindowScroll()
-const isTop = computed(() => y.value == 0)
+const show = ref(false);
+const md = useMediaQuery('(min-width: 768px)');
+const { y } = useWindowScroll();
+const isTop = computed(() => y.value == 0);
 
 const tools = [
   { name: 'SMP Endermen Grief Statistics', url: 'https://datastudio.google.com/s/hWkSkyObfNk' },
   {
     name: 'Command Combiner (unrelated)',
-    url: 'https://krissada.com/tools/minecraft-command-combiner/'
-  }
-]
+    url: 'https://krissada.com/tools/minecraft-command-combiner/',
+  },
+];
 </script>
 <template>
   <!-- <button data-collapse-toggle></button> -->
@@ -78,7 +78,7 @@ const tools = [
               >
                 <a
                   :class="{
-                    'text-indigo-500 dark:text-gray-200': active
+                    'text-indigo-500 dark:text-gray-200': active,
                   }"
                   :href="map.web"
                 >
@@ -116,12 +116,13 @@ const tools = [
               >
                 <a
                   :class="{
-                    'text-indigo-500 dark:text-gray-200': active
+                    'text-indigo-500 dark:text-gray-200': active,
                   }"
                   :href="tool.url"
                   target="_blank"
                 >
-                  {{ tool.name }} <ArrowTopRightOnSquareIcon class="inline w-4 ml-1" />
+                  {{ tool.name }}
+                  <ArrowTopRightOnSquareIcon class="inline w-4 ml-1" />
                 </a>
               </MenuItem>
             </MenuItems>

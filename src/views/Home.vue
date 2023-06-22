@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { FolderArrowDownIcon, MapIcon } from '@heroicons/vue/24/outline'
-import { useMediaQuery } from '@vueuse/core'
-import { useHead } from '@vueuse/head'
-import { headData } from '@/head'
-import { maps } from '@/maps'
+import { FolderArrowDownIcon, MapIcon } from '@heroicons/vue/24/outline';
+import { useMediaQuery } from '@vueuse/core';
+import { useHead } from '@vueuse/head';
+import { headData } from '@/head';
+import { maps } from '@/maps';
 
-const md = useMediaQuery('(min-width: 768px)')
+const md = useMediaQuery('(min-width: 768px)');
 
 useHead({
   title: "Omsin's Minecraft Server",
   meta: [
     //   { name: 'title', content: headData.title },
-    { name: 'og:title', content: headData.title }
+    { name: 'og:title', content: headData.title },
     //   { name: 'description', content: headData.description },
     //   { name: 'og:description', content: headData.description },
     //   { name: 'og:image', content: '@/assets/intro_vid_thumbnail.webp' }
-  ]
-})
+  ],
+});
 </script>
 
 <template>
@@ -78,6 +78,7 @@ useHead({
         <div class="flex flex-col md:flex-row gap-8 text-gray-900 dark:text-neutral-300">
           <div
             v-for="map in maps"
+            :key="map.name"
             class="relative group flex flex-col gap-2 p-4 hover:bg-gray-300/50 dark:hover:bg-gray-800/50 rounded-md transition-colors cursor-default"
           >
             <div class="flex items-center gap-2">

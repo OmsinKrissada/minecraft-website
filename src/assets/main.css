@@ -5,6 +5,6 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'Minecraftia';
-	src: url('./assets/Minecraftia-Adjusted2.ttf');
+  font-family: 'Minecraftia';
+  src: url('./assets/Minecraftia-Adjusted2.ttf');
 }

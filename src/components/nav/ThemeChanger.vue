@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useColorMode, useCycleList, useMediaQuery } from '@vueuse/core'
-import { ComputerDesktopIcon, MoonIcon, SunIcon } from '@heroicons/vue/20/solid'
+import { ref } from 'vue';
+import { useColorMode, useCycleList, useMediaQuery } from '@vueuse/core';
+import { ComputerDesktopIcon, MoonIcon, SunIcon } from '@heroicons/vue/20/solid';
 
-const color = useColorMode({ emitAuto: true })
-const { state, next } = useCycleList(['dark', 'light', 'auto'], { initialValue: color })
-const themeHover = ref(false)
-const md = useMediaQuery('(min-width: 768px)')
+const color = useColorMode({ emitAuto: true });
+const { state, next } = useCycleList(['dark', 'light', 'auto'], { initialValue: color });
+const themeHover = ref(false);
+const md = useMediaQuery('(min-width: 768px)');
 </script>
 
 <template>

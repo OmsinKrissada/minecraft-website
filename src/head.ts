@@ -1,4 +1,4 @@
-export const headData={
-	title:"Omsin's Minecraft Server",
-	description:''
-}
+export const headData = {
+  title: "Omsin's Minecraft Server",
+  description: '',
+};
