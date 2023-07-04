@@ -7,27 +7,16 @@ import img2 from '@/assets/carousel/view_2.webp';
 import img3 from '@/assets/carousel/view_3.webp';
 import img4 from '@/assets/carousel/view_4.webp';
 import img5 from '@/assets/carousel/view_5.webp';
-// import {
-//   DotButton,
-//   PrevButton,
-//   NextButton,
-// } from './EmblaCarouselArrowsDotsButtons'
+
 const imageUrls = [img1, img2, img3, img4, img5];
 
 const [emblaRef, emblaApi] = useEmblaCarousel({
   loop: true,
 });
 const selectedIndex = ref(0);
-const scrollSnaps = ref<number[]>([]);
-
-const onInit = (emblaApi: EmblaCarouselType) => {
-  scrollSnaps.value = emblaApi.scrollSnapList();
-};
 
 const onSelect = (emblaApi: EmblaCarouselType) => {
   selectedIndex.value = emblaApi.selectedScrollSnap();
-  //   setPrevBtnEnabled(emblaApi.canScrollPrev())
-  //   setNextBtnEnabled(emblaApi.canScrollNext())
 };
 
 let scrollInterval: number;
@@ -43,9 +32,7 @@ const clearScrollInterval = () => {
 onMounted(() => {
   if (!emblaApi.value) return;
 
-  onInit(emblaApi.value);
   onSelect(emblaApi.value);
-  emblaApi.value.on('reInit', onInit);
   emblaApi.value.on('reInit', onSelect);
   emblaApi.value.on('select', onSelect);
 
@@ -60,20 +47,14 @@ onMounted(() => {
     <div class="embla__viewport" ref="emblaRef">
       <div class="embla__container">
         <div v-for="(image, i) in imageUrls" class="embla__slide" :key="i">
-          <div class="embla__slide__number">
-            <span>{{ i + 1 }}</span>
-          </div>
           <img class="embla__slide__img rounded-lg" :src="image" alt="Your alt text" />
         </div>
       </div>
     </div>
 
-    <!-- <PrevButton onClick="{scrollPrev}" enabled="{prevBtnEnabled}" />
-    <NextButton onClick="{scrollNext}" enabled="{nextBtnEnabled}" /> -->
-
     <div class="embla__dots bottom-0">
       <button
-        v-for="(_, index) in scrollSnaps"
+        v-for="(_, index) in imageUrls"
         :key="index"
         class="flex items-center w-8 h-8 mx-2 after:w-full after:h-1 after:bg-white after:rounded-full touch-manipulation"
         :class="{
@@ -90,11 +71,6 @@ onMounted(() => {
       />
     </div>
   </div>
-
-  <!-- <div class="embla__dots">
-    {scrollSnaps.map((_, index) => ( <DotButton key={index} selected={index===selectedIndex}
-    onClick={()=> scrollTo(index)} /> ))}
-  </div> -->
 </template>
 
 <style scoped>
@@ -173,49 +149,5 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-/* .embla__dot {
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  margin-right: 0.75rem;
-  margin-left: 0.75rem;
-} */
-.embla__dot:after {
-  /* background: var(--background-site); */
-  border-radius: 0.2rem;
-  width: 100%;
-  height: 0.25rem;
-  content: '';
-}
-/* .embla__dot--selected:after {
-  background: linear-gradient(45deg, var(--brand-primary), var(--brand-secondary));
-} */
-.embla__button {
-  z-index: 1;
-  color: var(--background-site);
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  width: 4rem;
-  height: 4rem;
-}
-.embla__button--prev {
-  left: 1.6rem;
-}
-.embla__button--next {
-  right: 1.6rem;
-}
-.embla__button:disabled {
-  opacity: 0.3;
-}
-.embla__button__svg {
-  width: 65%;
-  height: 65%;
 }
 </style>

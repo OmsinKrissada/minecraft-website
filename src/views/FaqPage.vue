@@ -42,14 +42,14 @@ const list: { question: string; answer: string }[] = [
         <span class="text-3xl text-neutral-600 dark:text-neutral-400">คำถามที่เจอบ่อย</span>
       </h2>
     </div>
-    <div v-for="i in list" id="list" class="mt-10">
+    <div v-for="(item, i) in list" :key="i" id="list" class="mt-10">
       <p
         class="mb-4 font-semibold text-lg md:text2xl dark:text-gray-100"
-        v-html="marked.parse('Q: ' + i.question)"
+        v-html="marked.parse('Q: ' + item.question)"
       ></p>
       <p
         class="md:text-lg text-neutral-600 dark:text-neutral-300"
-        v-html="marked.parse('A: ' + i.answer)"
+        v-html="marked.parse('A: ' + item.answer)"
       ></p>
     </div>
   </section>

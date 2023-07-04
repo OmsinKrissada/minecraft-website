@@ -28,7 +28,6 @@ const tools = [
 ];
 </script>
 <template>
-  <!-- <button data-collapse-toggle></button> -->
   <nav
     class="sticky flex top-0 font-medium bg-gray-100/60 dark:bg-[rgb(17,17,17)]/60 backdrop-blur-md text-sm text-gray-600 dark:text-gray-300 duration-200 transition-shadow z-40"
     :class="{ 'shadow-md': !isTop && !show }"
@@ -73,6 +72,7 @@ const tools = [
             >
               <MenuItem
                 v-for="map in maps"
+                :key="map.name"
                 v-slot="{ active }"
                 class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded"
               >
@@ -111,6 +111,7 @@ const tools = [
             >
               <MenuItem
                 v-for="tool in tools"
+                :key="tool.name"
                 v-slot="{ active }"
                 class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded"
               >
