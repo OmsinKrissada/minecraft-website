@@ -53,22 +53,16 @@ onMounted(() => {
     </div>
 
     <div class="embla__dots bottom-0">
-      <button
-        v-for="(_, index) in imageUrls"
-        :key="index"
-        class="flex items-center w-8 h-8 mx-2 after:w-full after:h-1 after:bg-white after:rounded-full touch-manipulation"
+      <button v-for="(_, index) in imageUrls" :key="index"
+        class="flex items-center px-2 py-3 mx-2 after:w-2 after:h-2 after:bg-white after:rounded-full touch-manipulation"
         :class="{
           'after:bg-gradient-to-r from-pink-400 to-fuchsia-500': index === selectedIndex,
-        }"
-        type="button"
-        @click="
-          () => {
-            clearScrollInterval();
-            emblaApi?.scrollTo(index);
-            setScrollInterval();
-          }
-        "
-      />
+        }" type="button" @click="() => {
+  clearScrollInterval();
+  emblaApi?.scrollTo(index);
+  setScrollInterval();
+}
+  " />
     </div>
   </div>
 </template>
@@ -78,9 +72,11 @@ onMounted(() => {
   --slide-spacing: 1rem;
   --slide-size: 100%;
 }
+
 .embla__viewport {
   overflow: hidden;
 }
+
 .embla__container {
   backface-visibility: hidden;
   display: flex;
@@ -89,18 +85,21 @@ onMounted(() => {
   height: auto;
   margin-left: calc(var(--slide-spacing) * -1);
 }
+
 .embla__slide {
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
   position: relative;
 }
+
 .embla__slide__img {
   display: block;
   height: var(--slide-height);
   width: 100%;
   object-fit: cover;
 }
+
 .embla__slide__number {
   width: 4.6rem;
   height: 4.6rem;
@@ -115,7 +114,8 @@ onMounted(() => {
   text-align: center;
   pointer-events: none;
 }
-.embla__slide__number > span {
+
+.embla__slide__number>span {
   color: var(--brand-primary);
   background-image: linear-gradient(45deg, var(--brand-primary), var(--brand-secondary));
   background-clip: text;
@@ -129,6 +129,7 @@ onMounted(() => {
   right: 0;
   bottom: 0;
 }
+
 .embla__dot,
 .embla__button {
   -webkit-appearance: none;
@@ -141,6 +142,7 @@ onMounted(() => {
   padding: 0;
   margin: 0;
 }
+
 .embla__dots {
   z-index: 1;
   position: absolute;
