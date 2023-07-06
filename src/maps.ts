@@ -2,12 +2,14 @@ export const maps = [
   {
     name: 'Sua 2023',
     web: 'https://mc.krissada.com/map/survival_2023/',
+    web3d: 'https://mc.krissada.com/3dmap/survival_2023/',
     native_version: '1.20.1',
     active: true,
   },
   {
     name: 'Bonus 2022 - 2023',
     web: 'https://mc.krissada.com/map/bo_2022/',
+    web3d: 'https://mc.krissada.com/3dmap/bo_2022/',
     native_version: '1.19.4',
     download: 'https://mc.krissada.com/archive/bo_2022_2023-06-24.zip',
     archived_at: '2023-06-24',
