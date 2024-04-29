@@ -80,7 +80,7 @@ const tools = [
                   :class="{
                     'text-indigo-500 dark:text-gray-200': active,
                   }"
-                  :href="map.web"
+                  :href="map.web || map.web3d"
                 >
                   {{ map.name }}
                 </a>
