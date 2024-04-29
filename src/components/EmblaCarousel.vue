@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import useEmblaCarousel, { type EmblaCarouselType } from 'embla-carousel-vue';
-import { onMounted, ref } from 'vue';
+import useEmblaCarousel, { type EmblaCarouselVueType } from 'embla-carousel-vue';
+import { onMounted, ref, type UnwrapRef } from 'vue';
 
 import img1 from '@/assets/carousel/view_1.webp';
 import img2 from '@/assets/carousel/view_2.webp';
@@ -15,8 +15,8 @@ const [emblaRef, emblaApi] = useEmblaCarousel({
 });
 const selectedIndex = ref(0);
 
-const onSelect = (emblaApi: EmblaCarouselType) => {
-  selectedIndex.value = emblaApi.selectedScrollSnap();
+const onSelect = (emblaApi: UnwrapRef<EmblaCarouselVueType[1]>) => {
+  selectedIndex.value = emblaApi?.selectedScrollSnap() || 0;
 };
 
 let scrollInterval: number;
