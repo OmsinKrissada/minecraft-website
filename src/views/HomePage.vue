@@ -91,7 +91,7 @@ useHead({
               >
             </div>
             <p class="text-gray-700 dark:text-neutral-400">
-              Current version:
+              MC Version:
               <span class="font-medium">{{ map.native_version }}</span>
             </p>
             <div class="flex flex-row gap-4 font-medium text-sm text-gray-800">
