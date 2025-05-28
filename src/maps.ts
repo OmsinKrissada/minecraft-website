@@ -8,10 +8,16 @@ export const maps: {
   archived_at?: string;
 }[] = [
     {
+      name: 'Bonus 2025',
+      web3d: 'https://mc.krissada.com/3dmap/bo_2025/',
+      native_version: 'Fabric 1.21.5',
+      active: true,
+    },
+    {
       name: 'Bonus (Reborn) 2024',
       web3d: 'https://mc.krissada.com/3dmap/bo_2022_reborn/',
-      native_version: 'Fabric 1.21',
-      active: true,
+      native_version: 'Fabric 1.21.5',
+      active: false,
     },
     {
       name: 'Create 2023',

@@ -25,6 +25,10 @@ const tools = [
     name: 'Command Combiner (unrelated)',
     url: 'https://krissada.com/tools/minecraft-command-combiner/',
   },
+  {
+    name: 'Command Combiner v2 (unrelated)',
+    url: 'https://krissada.com/tools/minecraft-command-combiner-alpha/',
+  },
 ];
 </script>
 <template>
@@ -131,13 +135,11 @@ const tools = [
         </Menu>
         <!-- <RouterLink to="/how_to_join" class="">How To Join</RouterLink> -->
         <div v-if="md" class="flex items-center gap-6 md:ml-auto">
-          <WakeUpButton />
           <ThemeChanger class="relative" />
         </div>
       </div>
     </transition>
     <div v-if="!md" class="ml-auto flex items-center gap-6 pr-2">
-      <WakeUpButton />
       <ThemeChanger />
     </div>
   </nav>
