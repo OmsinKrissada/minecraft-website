@@ -22,12 +22,16 @@ const isTop = computed(() => y.value == 0);
 const tools = [
   { name: 'SMP Endermen Grief Statistics', url: 'https://datastudio.google.com/s/hWkSkyObfNk' },
   {
-    name: 'Command Combiner (unrelated)',
+    name: 'Command Combiner',
     url: 'https://krissada.com/tools/minecraft-command-combiner/',
   },
   {
-    name: 'Command Combiner v2 (unrelated)',
+    name: 'Command Combiner v2',
     url: 'https://krissada.com/tools/minecraft-command-combiner-alpha/',
+  },
+  {
+    name: 'Star Tech Playtime Checker',
+    url: 'https://mc.krissada.com/star_tech/playtime/',
   },
 ];
 </script>
