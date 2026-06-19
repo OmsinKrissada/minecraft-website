@@ -6,55 +6,76 @@ export const maps: {
   active: boolean;
   download?: string;
   archived_at?: string;
+  external?: boolean;
 }[] = [
-    {
-      name: 'Bonus 2025',
-      web3d: 'https://mc.krissada.com/3dmap/bo_2025/',
-      native_version: 'Fabric 1.21.5',
-      active: true,
-    },
-    {
-      name: 'Bonus (Reborn) 2024',
-      web3d: 'https://mc.krissada.com/3dmap/bo_2022_reborn/',
-      native_version: 'Fabric 1.21.5',
-      active: false,
-    },
-    {
-      name: 'Create 2023',
-      web3d: 'https://mc.krissada.com/3dmap/create-2023/',
-      native_version: 'Forge 1.20.1',
-      active: false,
-    },
-    {
-      name: 'Sua 2023',
-      web: 'https://mc.krissada.com/map/survival_2023/',
-      web3d: 'https://mc.krissada.com/3dmap/survival_2023/',
-      native_version: '1.20.1',
-      active: false,
-    },
-    {
-      name: 'Bonus 2022 - 2023',
-      web: 'https://mc.krissada.com/map/bo_2022/',
-      web3d: 'https://mc.krissada.com/3dmap/bo_2022/',
-      native_version: '1.19.4',
-      active: false,
-      // download: 'https://mc.krissada.com/archive/bo_2022_2023-06-24.zip',
-      archived_at: '2023-06-24',
-    },
-    {
-      name: 'Omsin 2022',
-      web: 'https://mc.krissada.com/map/survival_2022/',
-      native_version: '1.18.1',
-      active: false,
-      // download: 'https://mc.krissada.com/archive/survival_2022_2023-02-05.zip',
-      archived_at: '2023-02-05',
-    },
-    {
-      name: 'Omsin 2020 - 2021',
-      web: 'https://mc.krissada.com/map/survival_2020/',
-      native_version: '1.17.1',
-      active: false,
-      // download: 'https://mc.krissada.com/archive/survival_2020_2023-02-20.zip',
-      archived_at: '2023-02-20',
-    },
-  ];
+  {
+    name: 'Star Tech 2026',
+    web3d: 'https://mc.krissada.com/3dmap/star_tech_2026/',
+    native_version: 'Forge 1.20.1',
+    active: true,
+    external: false,
+  },
+  {
+    name: 'Ruffblitz 2025',
+    web3d: 'https://mc.krissada.com/3dmap/ruffblitz_2025/',
+    native_version: 'Fabric 1.21.11',
+    active: false,
+    external: true,
+  },
+  {
+    name: 'Chocolate 2025',
+    web3d: 'https://mc.krissada.com/3dmap/dunk_chocolate_2025/',
+    native_version: 'Forge 1.19.2',
+    active: false,
+  },
+  {
+    name: 'Bonus 2025',
+    web3d: 'https://mc.krissada.com/3dmap/bo_2025/',
+    native_version: 'Fabric 1.21.6',
+    active: false,
+  },
+  {
+    name: 'Bonus (Reborn) 2024',
+    web3d: 'https://mc.krissada.com/3dmap/bo_2022_reborn/',
+    native_version: 'Fabric 1.21.5',
+    active: false,
+  },
+  {
+    name: 'Create 2023',
+    web3d: 'https://mc.krissada.com/3dmap/create-2023/',
+    native_version: 'Forge 1.20.1',
+    active: false,
+  },
+  {
+    name: 'Sua 2023',
+    web: 'https://mc.krissada.com/map/survival_2023/',
+    web3d: 'https://mc.krissada.com/3dmap/survival_2023/',
+    native_version: '1.20.1',
+    active: false,
+  },
+  {
+    name: 'Bonus 2022 - 2023',
+    web: 'https://mc.krissada.com/map/bo_2022/',
+    web3d: 'https://mc.krissada.com/3dmap/bo_2022/',
+    native_version: '1.19.4',
+    active: false,
+    // download: 'https://mc.krissada.com/archive/bo_2022_2023-06-24.zip',
+    archived_at: '2023-06-24',
+  },
+  {
+    name: 'Omsin 2022',
+    web: 'https://mc.krissada.com/map/survival_2022/',
+    native_version: '1.18.1',
+    active: false,
+    // download: 'https://mc.krissada.com/archive/survival_2022_2023-02-05.zip',
+    archived_at: '2023-02-05',
+  },
+  {
+    name: 'Omsin 2020 - 2021',
+    web: 'https://mc.krissada.com/map/survival_2020/',
+    native_version: '1.17.1',
+    active: false,
+    // download: 'https://mc.krissada.com/archive/survival_2020_2023-02-20.zip',
+    archived_at: '2023-02-20',
+  },
+];
