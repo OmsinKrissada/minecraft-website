@@ -85,8 +85,15 @@ useHead({
             <div class="flex items-center gap-2">
               <h3 class="font-medium">{{ map.name }}</h3>
               <span
+                v-if="map.external"
+                class="w-fit px-2 bg-gradient-to-br from-emerald-500 to-sky-500 text-sm text-white rounded-full"
+                title="Omsin does not own nor host this server"
+                >External</span
+              >
+              <span
                 v-if="map.active"
                 class="w-fit px-2 bg-gradient-to-br from-fuchsia-500 to-violet-500 text-sm text-white rounded-full"
+                title="You are able to join this server"
                 >Active</span
               >
             </div>
