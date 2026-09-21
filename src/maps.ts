@@ -12,7 +12,7 @@ export const maps: {
     name: 'Star Tech 2026',
     web3d: 'https://mc.krissada.com/3dmap/star_tech_2026/',
     native_version: 'Forge 1.20.1',
-    active: true,
+    active: false,
     external: false,
   },
   {
