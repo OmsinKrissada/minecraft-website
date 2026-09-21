@@ -19,7 +19,7 @@
     "@vueuse/core": "^10.11.1",
     "@vueuse/head": "^2.0.0",
     "axios": "^1.20.0",
-    "embla-carousel-vue": "8.0.2",
+    "embla-carousel-vue": "8.6.0",
     "marked": "^12.0.2",
     "pinia": "^2.3.1",
     "vue": "^3.5.43",

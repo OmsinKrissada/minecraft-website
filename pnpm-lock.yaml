@@ -27,8 +27,8 @@ importers:
         specifier: ^1.20.0
         version: 1.20.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       embla-carousel-vue:
-        specifier: 8.0.2
-        version: 8.0.2(vue@3.5.43(typescript@5.4.5))
+        specifier: 8.6.0
+        version: 8.6.0(vue@3.5.43(typescript@5.4.5))
       marked:
         specifier: ^12.0.2
         version: 12.0.2
@@ -748,18 +748,18 @@ packages:
   electron-to-chromium@1.5.433:
     resolution: {integrity: sha512-5lCAbyZBjtmUt/RAGHRqrL2q0oEFRThDAsZHHDn9XHa89Qw7gMYOeSicBTy+AHfvo0r6vwsZvqNJTQIQy1BLzA==}
 
-  embla-carousel-reactive-utils@8.0.2:
-    resolution: {integrity: sha512-nLZqDkQdO0hvOP49/dUwjkkepMnUXgIzhyRuDjwGqswpB4Ibnc5M+w7rSQQAM+uMj0cPaXnYOTlv8XD7I/zVNw==}
+  embla-carousel-reactive-utils@8.6.0:
+    resolution: {integrity: sha512-fMVUDUEx0/uIEDM0Mz3dHznDhfX+znCCDCeIophYb1QGVM7YThSWX+wz11zlYwWFOr74b4QLGg0hrGPJeG2s4A==}
     peerDependencies:
-      embla-carousel: 8.0.2
+      embla-carousel: 8.6.0
 
-  embla-carousel-vue@8.0.2:
-    resolution: {integrity: sha512-GTxynHlwsG+Ls2UKIbjb/kA1cMQVW9oC8kfCJvOZdrzFOYZFP3wj3nqNE5UmYf3FSE1uy5bY11Pmz8NJEmsH1g==}
+  embla-carousel-vue@8.6.0:
+    resolution: {integrity: sha512-v8UO5UsyLocZnu/LbfQA7Dn2QHuZKurJY93VUmZYP//QRWoCWOsionmvLLAlibkET3pGPs7++03VhJKbWD7vhQ==}
     peerDependencies:
       vue: ^3.2.37
 
-  embla-carousel@8.0.2:
-    resolution: {integrity: sha512-bogsDO8xosuh/l3PxIvA5AMl3+BnRVAse9sDW/60amzj4MbGS5re4WH5eVEXiuH8G1/3G7QUAX2QNr3Yx8z5rA==}
+  embla-carousel@8.6.0:
+    resolution: {integrity: sha512-SjWyZBHJPbqxHOzckOfo8lHisEaJWmwd23XppYFYVh10bU66/Pn5tkVkbkCMZVdbUE5eTCI2nD8OyIP4Z+uwkA==}
 
   entities@7.0.1:
     resolution: {integrity: sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA==}
@@ -2691,17 +2691,17 @@ snapshots:
 
   electron-to-chromium@1.5.433: {}
 
-  embla-carousel-reactive-utils@8.0.2(embla-carousel@8.0.2):
+  embla-carousel-reactive-utils@8.6.0(embla-carousel@8.6.0):
     dependencies:
-      embla-carousel: 8.0.2
+      embla-carousel: 8.6.0
 
-  embla-carousel-vue@8.0.2(vue@3.5.43(typescript@5.4.5)):
+  embla-carousel-vue@8.6.0(vue@3.5.43(typescript@5.4.5)):
     dependencies:
-      embla-carousel: 8.0.2
-      embla-carousel-reactive-utils: 8.0.2(embla-carousel@8.0.2)
+      embla-carousel: 8.6.0
+      embla-carousel-reactive-utils: 8.6.0(embla-carousel@8.6.0)
       vue: 3.5.43(typescript@5.4.5)
 
-  embla-carousel@8.0.2: {}
+  embla-carousel@8.6.0: {}
 
   entities@7.0.1: {}
 
